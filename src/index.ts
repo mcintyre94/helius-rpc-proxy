@@ -1,7 +1,7 @@
 interface Env {
 	CORS_ALLOW_ORIGIN: string;
 	HELIUS_API_KEY: string;
-	DEVNET?: string;
+	DEVNET?: boolean;
 }
 
 function makeHeliusRpcUrlBase(isDevnet: boolean) {
@@ -42,7 +42,7 @@ export default {
 			});
 		}
 
-		const isDevnet = env.DEVNET ? env.DEVNET.toLowerCase() === 'true' : false;
+		const isDevnet = env.DEVNET ?? false;
 		const heliusRpcUrlBase = makeHeliusRpcUrlBase(isDevnet);
 		const heliusApiUrlBase = makeHeliusApiUrlBase(isDevnet);
 

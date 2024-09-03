@@ -3,7 +3,7 @@ main = "./src/index.ts"
 compatibility_date = "2022-05-03"
 
 [env.mainnet.vars]
-DEVNET = "false"
+DEVNET = false
 
 [env.devnet.vars]
-DEVNET = "true"
+DEVNET = true
