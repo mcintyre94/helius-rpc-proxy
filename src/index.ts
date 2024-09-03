@@ -55,7 +55,7 @@ export default {
 		return await fetch(proxyRequest).then(res => {
 			return new Response(res.body, {
 				status: res.status,
-				headers: corsHeaders
+				headers: res.headers,
 			});
 		});
 	},
